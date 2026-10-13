@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankur sharma | Web Design Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home">Ankur<span>Portfolio</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">HELLO, I'M ANKUR</p>
+          <h1>I’m Ankur Sharma, a <span>Web Designer.</span></h1>
+          <p class="intro">
+            I have completed CWT with PHP and enjoy creating responsive
+            websites and useful interactive projects.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">Explore Projects</a>
+            <a class="button secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="portrait-wrap">
+          <img
+            class="portrait"
+            src="pic.jpeg"
+            alt="Profile portrait placeholder">
+          <div class="portrait-tag">
+            <span class="status-dot"></span>
+            Available for projects
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills and Qualification -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MY QUALIFICATION</p>
+          <h2>CWT with PHP</h2>
+          <p>
+            I have completed CWT with PHP and am building my skills
+            in web design and development.
+          </p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card">
+            <div class="skill-icon">⌘</div>
+            <h3>HTML</h3>
+            <p>Semantic, well-structured pages.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">✦</div>
+            <h3>CSS</h3>
+            <p>Responsive layouts and polished styling.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">UI/UX</div>
+            <h3>UI/UX</h3>
+            <p>  Mobile, tablet aur desktop support
+
+Mobile-friendly menu</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Interactive features and useful tools.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>My Projects</h2>
+          <p>These three interactive projects are built into my portfolio.</p>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- Project 1: Calculator -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number">01</span>
+              <span class="project-label">UTILITY</span>
+            </div>
+
+            <h3>Calculator</h3>
+            <p>Perform everyday calculations with a clean, easy-to-use interface.</p>
+
+            <div class="mini-calculator">
+              <output id="calcDisplay" class="calc-display"
+                aria-live="polite">0</output>
+
+              <div class="calc-keys">
+                <button data-calc="clear" class="key key-muted">AC</button>
+                <button data-calc="sign" class="key key-muted">±</button>
+                <button data-calc="percent" class="key key-muted">%</button>
+                <button data-calc="/" class="key key-op">÷</button>
+
+                <button data-calc="7" class="key">7</button>
+                <button data-calc="8" class="key">8</button>
+                <button data-calc="9" class="key">9</button>
+                <button data-calc="*" class="key key-op">×</button>
+
+                <button data-calc="4" class="key">4</button>
+                <button data-calc="5" class="key">5</button>
+                <button data-calc="6" class="key">6</button>
+                <button data-calc="-" class="key key-op">−</button>
+
+                <button data-calc="1" class="key">1</button>
+                <button data-calc="2" class="key">2</button>
+                <button data-calc="3" class="key">3</button>
+                <button data-calc="+" class="key key-op">+</button>
+
+                <button data-calc="0" class="key key-zero">0</button>
+                <button data-calc="." class="key">.</button>
+                <button data-calc="=" class="key key-equals">=</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Expense Tracker -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number">02</span>
+              <span class="project-label">FINANCE</span>
+            </div>
+
+            <h3>Expense Tracker</h3>
+            <p>
+              Add expenses and keep track of your spending.
+              Entries stay saved in this browser.
+            </p>
+
+            <div class="expense-app">
+              <div class="expense-total">
+                <span>Total expenses</span>
+                <strong id="expenseTotal">₹0.00</strong>
+              </div>
+
+              <form id="expenseForm" class="expense-form">
+                <label for="expenseName">Description</label>
+                <input
+                  id="expenseName"
+                  type="text"
+                  placeholder="e.g. Lunch"
+                  maxlength="60"
+                  required>
+
+                <label for="expenseAmount">Amount (₹)</label>
+                <input
+                  id="expenseAmount"
+                  type="number"
+                  min="0.01"
+                  step="0.01"
+                  placeholder="250"
+                  required>
+
+                <button class="button primary full" type="submit">
+                  Add Expense
+                </button>
+              </form>
+
+              <ul id="expenseList" class="expense-list">
+                <li class="empty-state">No expenses yet. Add one above.</li>
+              </ul>
+
+              <button id="clearExpenses" class="text-button" type="button">
+                Clear all expenses
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: Tic-Tac-Toe -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number">03</span>
+              <span class="project-label">GAME</span>
+            </div>
+
+            <h3>Tic-Tac-Toe</h3>
+            <p>
+              Play a quick game for two players.
+              Get three marks in a row to win.
+            </p>
+
+            <div class="game-app">
+              <div class="game-status" id="gameStatus" aria-live="polite">
+                X's turn
+              </div>
+
+              <div class="game-board" id="gameBoard"
+                aria-label="Tic tac toe board">
+                <button class="game-cell" data-cell="0" aria-label="Cell 1"></button>
+                <button class="game-cell" data-cell="1" aria-label="Cell 2"></button>
+                <button class="game-cell" data-cell="2" aria-label="Cell 3"></button>
+
+                <button class="game-cell" data-cell="3" aria-label="Cell 4"></button>
+                <button class="game-cell" data-cell="4" aria-label="Cell 5"></button>
+                <button class="game-cell" data-cell="5" aria-label="Cell 6"></button>
+
+                <button class="game-cell" data-cell="6" aria-label="Cell 7"></button>
+                <button class="game-cell" data-cell="7" aria-label="Cell 8"></button>
+                <button class="game-cell" data-cell="8" aria-label="Cell 9"></button>
+              </div>
+
+              <div class="score-row">
+                <span>X wins <strong id="xScore">0</strong></span>
+                <span>O wins <strong id="oScore">0</strong></span>
+                <span>Draws <strong id="drawScore">0</strong></span>
+              </div>
+
+              <button class="button secondary full" id="resetGame" type="button">
+                Restart Round
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>Have a project in mind?</h2>
+          <p>Send a message and let's talk about what we can build together.</p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <label for="contactName">Your name</label>
+          <input
+            id="contactName"
+            type="text"
+            placeholder="Your name"
+            required>
+
+          <label for="contactEmail">Your email</label>
+          <input
+            id="contactEmail"
+            type="email"
+            placeholder="you@example.com"
+            required>
+
+          <label for="contactMessage">Message</label>
+          <textarea
+            id="contactMessage"
+            rows="4"
+            placeholder="Tell me about your project..."
+            required></textarea>
+
+          <button class="button primary" type="submit">
+            Prepare Email
+          </button>
+
+          <p class="form-note">
+            This opens your default email app with a prepared message.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#home">Ankur<span>Portfolio</span></a>
+      <p>Designed with care · <span id="year"></span></p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
+
